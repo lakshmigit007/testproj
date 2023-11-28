@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">{% csrf_token %}
+     <label for="">Enter the name</label>
+     <input type="text" name="name">
+     <label for="">Enter the age</label>
+     <input type="number" name="age">
+     <label for="">Enter the mob</label>
+     <input type="number" name="mob">
+
+     <input type="submit" value="submit">
+     <input type="reset" value="cancel">
+   
+    </form>
+   
+   {% for s in stdform %}
+   {{s.name}}<br>
+   {{s.age}}<br>
+   {{s.mob}}<br>
+   
+    
+   {% endfor %}
+    
+</body>
+</html>
